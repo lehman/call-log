@@ -1,46 +1,79 @@
-# Getting Started with Create React App
+Thanks for taking the time to work on this take-home challenge! We're excited to see what you put together.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+—Team Evergreen
 
-## Available Scripts
 
-In the project directory, you can run:
+# Process
 
-### `yarn start`
+ * Create a repository and commit your work to it
+ * Document any requirements or assumptions about your code with inline comments
+ * Create a new file, `README-YourName.md`, add it to the root directory, and provide any additional commentary there
+ * To submit, zip the repository and email it to us. We will confirm receipt when we get it — if we don't, please ask again!
+ * Any questions, email us!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Evaluation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Aim for basics; skip the sticky parts. You are not being evaluated on the number of lines of code you write, but on the quality and economy of what you write to satisfy the challenge.
 
-### `yarn test`
+Key criteria:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ * Code completeness
+ * Style
+ * Economy
+ * It runs!
 
-### `yarn build`
+When you submit your project, we will review and schedule a 30-minute call to go over your work. On that call, be prepared to talk about
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ * Design decisions
+ * Trade-offs
+ * Possible places to expand
+ * Cool things you're proud of
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# The Task
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Create a basic "Call Log" app to track notes you'd take while talking to interviewers. We need a backend to store and serve notes, and we need a frontend for users to view and make notes.
 
-### `yarn eject`
+The user is a job applicant who is engaged with multiple companies and trying to determine which one they want to work at. A company may be represented by multiple people, and the applicant may be interested in multiple jobs at that one company, but _assume for the sake of the exercise that each company has **one open job** and the user is only talking to **one point of contact**_.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The backend of the app is a **Django project**; code and documentation is provided in `/backend`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The frontend of the app should be a **React app**; put your code in `/frontend`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Design and implementation are up to you, but strive for simplicity in both.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The use of external frameworks and packages is totally acceptable and even encouraged when they are industry standard/best practice.
 
-## Learn More
+## Data
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Check out [backend/README.md](backend/README.md) for a description of the data model and API endpoints currently available.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Authentication
+
+Track who your user is, but skip authentication! Call that one a "gimme" for future expansion.
+
+## User Interface
+
+Again, skip login. But provide an experience to:
+
+ * Add jobs
+ * View jobs you're tracking
+ * Take a note while on a call
+ * Remove a note
+
+## Frontend
+
+Your frontend should be a React web app. If you use a module loader, precompiler, or other packaging tools, please make sure you include un-minified sources.
+
+Don't worry too much about how it looks ... but don't worry too little!
+
+### Requirements
+
+ - [ ] List jobs
+ - [ ] Add a new job
+ - [ ] View notes for jobs
+ - [ ] Take a note for a job
+ - [ ] Works in latest versions of Chrome, Firefox, Safari and Internet Explorer. No need to support anything older than that.
+
+# Thanks!
+
+Looking forward to checking it out!
