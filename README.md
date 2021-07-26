@@ -1,15 +1,18 @@
+Check out [README-LouiseLehman.md](README-LouiseLehman.md) for a description of what I personally added to this coding assignment.
+
+---
+
 Thanks for taking the time to work on this take-home challenge! We're excited to see what you put together.
 
 —Team Evergreen
 
-
 # Process
 
- * Create a repository and commit your work to it
- * Document any requirements or assumptions about your code with inline comments
- * Create a new file, `README-YourName.md`, add it to the root directory, and provide any additional commentary there
- * To submit, zip the repository and email it to us. We will confirm receipt when we get it — if we don't, please ask again!
- * Any questions, email us!
+-   Create a repository and commit your work to it
+-   Document any requirements or assumptions about your code with inline comments
+-   Create a new file, `README-YourName.md`, add it to the root directory, and provide any additional commentary there
+-   To submit, zip the repository and email it to us. We will confirm receipt when we get it — if we don't, please ask again!
+-   Any questions, email us!
 
 ## Evaluation
 
@@ -17,17 +20,17 @@ Aim for basics; skip the sticky parts. You are not being evaluated on the number
 
 Key criteria:
 
- * Code completeness
- * Style
- * Economy
- * It runs!
+-   Code completeness
+-   Style
+-   Economy
+-   It runs!
 
 When you submit your project, we will review and schedule a 30-minute call to go over your work. On that call, be prepared to talk about
 
- * Design decisions
- * Trade-offs
- * Possible places to expand
- * Cool things you're proud of
+-   Design decisions
+-   Trade-offs
+-   Possible places to expand
+-   Cool things you're proud of
 
 # The Task
 
@@ -55,10 +58,10 @@ Track who your user is, but skip authentication! Call that one a "gimme" for fut
 
 Again, skip login. But provide an experience to:
 
- * Add jobs
- * View jobs you're tracking
- * Take a note while on a call
- * Remove a note
+-   Add jobs
+-   View jobs you're tracking
+-   Take a note while on a call
+-   Remove a note
 
 ## Frontend
 
@@ -68,11 +71,11 @@ Don't worry too much about how it looks ... but don't worry too little!
 
 ### Requirements
 
- - [ ] List jobs
- - [ ] Add a new job
- - [ ] View notes for jobs
- - [ ] Take a note for a job
- - [ ] Works in latest versions of Chrome, Firefox, Safari and Internet Explorer. No need to support anything older than that.
+-   [ ] List jobs
+-   [ ] Add a new job
+-   [ ] View notes for jobs
+-   [ ] Take a note for a job
+-   [ ] Works in latest versions of Chrome, Firefox, Safari and Internet Explorer. No need to support anything older than that.
 
 # Thanks!
 
