@@ -1,0 +1,12 @@
+.jobs-header {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.jobs-header > * {
+    margin: 20px;
+}
+
+.job-card {
+    margin-bottom: 20px;
+}
