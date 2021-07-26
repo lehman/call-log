@@ -1,6 +1,8 @@
 import { Descriptions } from 'antd';
 import { useContext } from 'react';
 import UserContext from '../../api/JobManagementProvider';
+import AddUser from '../AddUser/AddUser';
+import Jobs from '../Jobs/Jobs';
 import './UserManagement.css';
 
 const UserManagement = () => {
@@ -20,9 +22,11 @@ const UserManagement = () => {
                         <Descriptions.Item label="Name">{currentUser.name}</Descriptions.Item>
                         <Descriptions.Item label="Email">{currentUser.email}</Descriptions.Item>
                     </Descriptions>
+
+                    <Jobs />
                 </>
             ) : (
-                <p>No User</p>
+                <AddUser></AddUser>
             )}
         </div>
     );

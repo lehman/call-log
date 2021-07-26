@@ -95,13 +95,6 @@ const Jobs = () => {
                                     className="job-card"
                                 >
                                     {contents}
-                                    {/* <div key={`${item.id}`}>
-                                    <p>{`Company: ${item.company}`}</p>
-                                    <p>{`Title: ${item.title}`}</p>
-                                    <p>{`Interviewer: ${item.interviewer}`}</p>
-                                </div>
-
-                                <Notes job={item} /> */}
                                 </Card>
                             );
                         })
@@ -110,7 +103,7 @@ const Jobs = () => {
                     )}
                 </>
             ) : (
-                <p>No User</p>
+                <p>To manage your companies, please log in.</p>
             )}
         </>
     );

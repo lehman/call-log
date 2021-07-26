@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createContext, useEffect, useState } from 'react';
-import { User, Job, CreateJob, CreateNote, Note } from './models';
+import { User, Job, CreateJob, CreateNote, Note, CreateUser } from './models';
 
 interface IUserState {
     users: User[];
@@ -10,6 +10,7 @@ interface IUserState {
     jobs: Job[];
     setJobs: React.Dispatch<React.SetStateAction<Job[]>>;
     getUsers: () => Promise<void>;
+    addUser: (user: CreateUser) => Promise<void>;
     getJobs: () => Promise<Job[]>;
     addJob: (job: CreateJob) => Promise<void>;
     notes: Note[];
@@ -58,6 +59,17 @@ export const JobManagementProvider: React.FC<IProviderProps> = (props) => {
         getUsers();
     }, []);
 
+    const addUser = async (user: CreateUser) => {
+        try {
+            const response = await axios.post(`http://localhost:8000/user/`, user);
+            const createdUser = await response.data;
+            setUsers([...users, createdUser]);
+            setCurrentUser(createdUser);
+        } catch (e) {
+            console.log(e);
+        }
+    };
+
     const getJobs = async () => {
         try {
             if (currentUser !== undefined) {
@@ -73,6 +85,7 @@ export const JobManagementProvider: React.FC<IProviderProps> = (props) => {
 
     const addJob = async (job: CreateJob) => {
         try {
+            console.log(job);
             const response = await axios.post(`http://localhost:8000/jobs/`, job);
             const createdJob = await response.data;
             setJobs([...jobs, createdJob]);
@@ -119,6 +132,7 @@ export const JobManagementProvider: React.FC<IProviderProps> = (props) => {
         users,
         setUsers,
         getUsers,
+        addUser,
         currentUser,
         setCurrentUser,
         jobs,

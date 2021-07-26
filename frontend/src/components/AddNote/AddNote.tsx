@@ -46,9 +46,7 @@ const AddNoteForm = ({ visible, onChange, onCreate, onCancel }: IAddNoteFormProp
                 layout="vertical"
                 name="form_in_modal"
                 initialValues={{
-                    company: '',
-                    title: '',
-                    interviewer: '',
+                    text: '',
                 }}
                 onValuesChange={(_, values) => {
                     onChange(values);

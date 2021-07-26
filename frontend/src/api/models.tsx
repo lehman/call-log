@@ -19,11 +19,16 @@ export interface Note {
     job_id: string;
 }
 
+export interface CreateUser {
+    name: string;
+    email: string;
+}
+
 export interface CreateJob {
     company: string;
     title: string;
     interviewer: string;
-    user_id: string;
+    user: string;
 }
 
 export interface CreateNote {

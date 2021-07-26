@@ -57,7 +57,7 @@ const Notes = (props: INoteProps) => {
                     </div>
                 </>
             ) : (
-                <p>No User</p>
+                <p>To manage your Notes, please log in.</p>
             )}
         </>
     );

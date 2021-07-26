@@ -1,48 +1,41 @@
 import { useContext, useState } from 'react';
 import 'antd/dist/antd.css';
 import { Button, Modal, Form, Input } from 'antd';
-import { CreateJob } from '../../api/models';
-import './AddJob.css';
+import { CreateUser } from '../../api/models';
+import './AddUser.css';
 import UserContext from '../../api/JobManagementProvider';
 
-const jobFormFields = [
+const userFormFields = [
     {
-        name: 'company',
-        label: 'Company',
-        placeholder: 'Company name',
+        name: 'name',
+        label: 'Name',
+        placeholder: 'Enter your name',
         required: true,
         maxLength: 64,
     },
     {
-        name: 'title',
-        label: 'Position',
-        placeholder: 'Position title',
-        required: true,
-        maxLength: 64,
-    },
-    {
-        name: 'interviewer',
-        label: 'Interviewer',
-        placeholder: 'Interviewer name',
+        name: 'email',
+        label: 'Email',
+        placeholder: 'Enter your email',
         required: true,
         maxLength: 64,
     },
 ];
 
-export interface IAddJobFormProps {
+export interface IAddUserFormProps {
     visible: boolean | undefined;
     onChange: (values: any) => void;
     onCreate: () => Promise<void>;
     onCancel: () => void;
 }
 
-const AddJobForm = ({ visible, onChange, onCreate, onCancel }: IAddJobFormProps) => {
+const AddUserForm = ({ visible, onChange, onCreate, onCancel }: IAddUserFormProps) => {
     const [form] = Form.useForm();
     return (
         <Modal
             visible={visible}
-            title="Add a Job"
-            okText="Add Job"
+            title="Add a User"
+            okText="Add User"
             cancelText="Cancel"
             onCancel={onCancel}
             onOk={() => {
@@ -61,15 +54,14 @@ const AddJobForm = ({ visible, onChange, onCreate, onCancel }: IAddJobFormProps)
                 layout="vertical"
                 name="form_in_modal"
                 initialValues={{
-                    company: '',
-                    title: '',
-                    interviewer: '',
+                    name: '',
+                    email: '',
                 }}
                 onValuesChange={(_, values) => {
                     onChange(values);
                 }}
             >
-                {jobFormFields.map((field) => {
+                {userFormFields.map((field) => {
                     return (
                         <Form.Item
                             key={field.name}
@@ -95,27 +87,21 @@ const AddJobForm = ({ visible, onChange, onCreate, onCancel }: IAddJobFormProps)
     );
 };
 
-export interface IAddJobProps {
-    userId: string;
-}
-
-const AddJob = (props: IAddJobProps) => {
+const AddUser = () => {
     const [visible, setVisible] = useState(false);
-    const [jobToAdd, setJobToAdd] = useState<CreateJob>({
-        company: '',
-        title: '',
-        interviewer: '',
-        user: props.userId,
+    const [userToAdd, setUserToAdd] = useState<CreateUser>({
+        name: '',
+        email: '',
     });
 
     const userContext = useContext(UserContext);
     if (!userContext) {
         return null;
     }
-    const { addJob } = userContext;
+    const { addUser } = userContext;
 
     const onCreate = async () => {
-        addJob(jobToAdd);
+        addUser(userToAdd);
         setVisible(false);
     };
 
@@ -127,12 +113,12 @@ const AddJob = (props: IAddJobProps) => {
                     setVisible(true);
                 }}
             >
-                Add Job
+                Add User
             </Button>
-            <AddJobForm
+            <AddUserForm
                 visible={visible}
                 onChange={(values: any) => {
-                    setJobToAdd({ ...values, user: props.userId });
+                    setUserToAdd(values);
                 }}
                 onCreate={onCreate}
                 onCancel={() => {
@@ -143,4 +129,4 @@ const AddJob = (props: IAddJobProps) => {
     );
 };
 
-export default AddJob;
+export default AddUser;
