@@ -13,6 +13,10 @@ I worked on getting through the basic implementation and a basic UI using a desi
 -   [x] Remove a note
 -   [~] Works in latest versions of Chrome, Firefox, Safari and Internet Explorer. No need to support anything older than that.
 
+### Time Spent
+
+I spent much more than 3-4 hours on this. Probably around 15.
+
 ## Libraries Used
 
 This repo was built using `create-react-app --template typescript`. In addition to the libraries that are built in with using `create-react-app`, this repo uses:
